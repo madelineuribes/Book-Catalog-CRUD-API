@@ -1,0 +1,6 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteRule ^books/([0-9]+)$ controller/book.php?bookid=$1 [L]
+RewriteRule ^books$ controller/book.php [L]
